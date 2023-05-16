@@ -1,10 +1,8 @@
 import sys
 from ting_file_management.file_management import txt_importer
-from ting_file_management.queue import Queue
 
 
 def process(path_file, instance):
-    file = txt_importer(path_file)
     file_out = create_file_out(path_file)
 
     if path_file not in instance.list:
@@ -18,7 +16,7 @@ def remove(instance):
         return None
 
     path_file = instance.dequeue()
-    print(f"Arquivo {path_file} removido com sucesso", file=sys.stdout)    
+    print(f"Arquivo {path_file} removido com sucesso", file=sys.stdout)   
 
 
 def file_metadata(instance, position):
