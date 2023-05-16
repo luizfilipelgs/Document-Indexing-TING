@@ -13,7 +13,7 @@ class Queue(AbstractQueue):
 
     def dequeue(self):
         if self.__len__() != 0:
-          return self.list.pop(0)
+            return self.list.pop(0)
         raise Exception("Lista Vazia")
 
 
@@ -21,4 +21,3 @@ class Queue(AbstractQueue):
         if len(self.list) > index >= 0:
             return self.list[index]
         raise IndexError('Índice Inválido ou Inexistente')
-        
