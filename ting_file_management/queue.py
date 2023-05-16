@@ -16,7 +16,6 @@ class Queue(AbstractQueue):
             return self.list.pop(0)
         raise Exception("Lista Vazia")
 
-
     def search(self, index):
         if len(self.list) > index >= 0:
             return self.list[index]
