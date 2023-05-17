@@ -41,4 +41,3 @@ def search_by_word(word, instance):
             }
             results.append(file_results)
     return results
-
