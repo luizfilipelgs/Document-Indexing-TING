@@ -3,10 +3,10 @@ from ting_file_management.file_process import create_file_out
 
 def find_word(lines, word):
     occurrences = [
-    {"linha": n} 
-    for n, line in enumerate(lines, 1) 
-    if word.lower() in line.lower()
-]
+        {"linha": n}
+        for n, line in enumerate(lines, 1)
+        if word.lower() in line.lower()
+    ]
     return occurrences
 
 
@@ -36,8 +36,9 @@ def search_by_word(word, instance):
                 "ocorrencias": [
                     {
                         "linha": occurrence["linha"],
-                        "conteudo": file_info["linhas_do_arquivo"][
-                            occurrence["linha"] - 1].strip()
+                        "conteudo": file_info[
+                            "linhas_do_arquivo"][occurrence["linha"]
+                                                 - 1].strip()
                     }
                     for occurrence in occurrences
                 ]
