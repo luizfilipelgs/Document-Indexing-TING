@@ -33,7 +33,7 @@ def test_basic_priority_queueing():
     instance.enqueue(mock[1])
     instance.enqueue(mock[2])
     instance.enqueue(mock[3])
-        
+
     assert len(instance.high_priority) == 2
     assert len(instance.regular_priority) == 2
 
